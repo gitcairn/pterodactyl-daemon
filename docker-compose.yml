@@ -5,8 +5,8 @@ services:
     restart: always
     hostname: daemon
     ports:
-      - "8080:8080"
-      - "2022:2022"
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:2022:2022"
     tty: true
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"

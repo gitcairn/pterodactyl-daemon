@@ -15,4 +15,4 @@ services:
       - "/srv/daemon-data/:/srv/daemon-data/"
       - "/tmp/pterodactyl/:/tmp/pterodactyl"
       ## Required for ssl if you user let's encrypt. uncomment to use.
-      ## - "/etc/letsencrypt/:/etc/letsencrypt/"
+      - "/etc/letsencrypt/:/etc/letsencrypt/"

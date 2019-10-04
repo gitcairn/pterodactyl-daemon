@@ -16,6 +16,9 @@ RUN apk add --no-cache openssl make gcc g++ python linux-headers paxctl gnupg ta
  && chmod +x /srv/daemon/.docker/entrypoint.sh \
  && cp /srv/daemon/.docker/supervisord.conf /etc/supervisord.conf
 
+ENV TZ=Europe/London
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 EXPOSE 8080
 
 ENTRYPOINT [ "/bin/ash", "/srv/daemon/.docker/entrypoint.sh" ]
